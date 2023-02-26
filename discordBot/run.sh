@@ -3,7 +3,8 @@
 discordToken="$(bashio::config 'discord_token')"
 echo "Start Execution"
 cd /discordBot
-export token=$discordToken
+echo $discordToken
+export TOKEN=$discordToken
 ls
 npm start
 echo "End Execution"

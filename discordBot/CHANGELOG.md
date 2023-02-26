@@ -13,6 +13,6 @@ All notable changes to this project will be documented in this file.
 
 - Writing token in .env file
 
-## 0.1.4
+## 0.1.4 & 0.1.5
 
 - Correcting toke export
