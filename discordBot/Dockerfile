@@ -13,7 +13,7 @@ RUN echo "Staring" \
     && wget "https://github.com/Sephiloud/eumel-bot/archive/$VERSION.tar.gz" \
     && mkdir /discordBot \
     && echo "Downloaded Source Code" \
-    && tar -xzf "eumel-bot-$VERSION.tar.gz" -C /discordBot --strip-components=1 \
+    && tar -xzf "$VERSION.tar.gz" -C /discordBot --strip-components=1 \
     && rm "$VERSION.tar.gz" \
     && echo "Unziped Source Code" \
     && cd /discordBot \
