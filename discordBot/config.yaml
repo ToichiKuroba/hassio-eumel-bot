@@ -15,7 +15,6 @@ map:
   - share:rw
 options: 
   discord_token: ""
-privileged: 
 schema:
   config_dir: match(^.{12}$)
 stage: experimental
