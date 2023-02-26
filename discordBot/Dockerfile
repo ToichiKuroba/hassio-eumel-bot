@@ -6,7 +6,7 @@ RUN apk add --no-cache \
         npm \
         gcc \
         wget \
-    && VERSION=$(curl --silent "https://api.github.com/repos/Sephiloud/eumel-bot/releases/latest" | grep -Po '"tag_name": "\K.*?(?=")') \
+    && VERSION=$(curl --silent "https://api.github.com/repos/Sephiloud/eumel-bot/releases/latest" | grep -e '"tag_name": "\K.*?(?=")') \
     && wget "https://github.com/Sephiloud/eumel-bot/archive/$VERSION.tar.gz" \
     && mkdir /discordBot \
     && tar -xzf "$VERSION.tar.gz" -C /discordBot --strip-components=1 \
