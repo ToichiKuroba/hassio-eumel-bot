@@ -8,7 +8,7 @@ RUN echo "Staring" \
         gcc \
         wget \
     && echo "Installed Packages" \
-    && VERSION=v0.1 \
+    && VERSION=v0.2 \
     && echo "Got version $VERSION" \
     && wget "https://github.com/Sephiloud/eumel-bot/archive/$VERSION.tar.gz" \
     && mkdir /discordBot \
