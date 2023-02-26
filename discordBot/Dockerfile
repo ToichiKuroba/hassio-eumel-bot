@@ -1,7 +1,8 @@
 ARG BUILD_FROM
 FROM $BUILD_FROM
 
-RUN apk add --no-cache \
+RUN echo "Staring" \
+    && apk add --no-cache \
         nodejs \ 
         npm \
         gcc \
