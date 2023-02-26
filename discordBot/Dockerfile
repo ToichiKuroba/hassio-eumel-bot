@@ -1,16 +1,19 @@
 ARG BUILD_FROM
 FROM $BUILD_FROM
 
-RUN apt-get update \
-    && apt-get install -y \
+RUN apk add --no-cache \
+        node \
         gcc \
         wget \
     && VERSION=$(curl --silent "https://api.github.com/repos/Sephiloud/eumel-bot/releases/latest" | grep -Po '"tag_name": "\K.*?(?=")') \
     && wget "https://github.com/Sephiloud/eumel-bot/archive/$VERSION.tar.gz" \
     && mkdir /discordBot \
     && tar -xzf "$VERSION.tar.gz" -C /discordBot --strip-components=1 \
-    && rm "$VERSION.zip" \
+    && rm "$VERSION.tar.gz" \
     && cd /discordBot \
     && npm install \
 
-CMD [ "/discordBot", "export token=$(bashio::config 'discord_token'); npm start" ]
+COPY run.sh /
+RUN chmod a+x /run.sh
+
+CMD [ "/run.sh" ]
