@@ -2,7 +2,8 @@ ARG BUILD_FROM
 FROM $BUILD_FROM
 
 RUN apk add --no-cache \
-        node \
+        nodejs \ 
+        npm \
         gcc \
         wget \
     && VERSION=$(curl --silent "https://api.github.com/repos/Sephiloud/eumel-bot/releases/latest" | grep -Po '"tag_name": "\K.*?(?=")') \
@@ -11,7 +12,7 @@ RUN apk add --no-cache \
     && tar -xzf "$VERSION.tar.gz" -C /discordBot --strip-components=1 \
     && rm "$VERSION.tar.gz" \
     && cd /discordBot \
-    && npm install \
+    && npm install
 
 COPY run.sh /
 RUN chmod a+x /run.sh
