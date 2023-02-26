@@ -1,5 +1,5 @@
 name: Eumel Discord Bot
-version: 0.0.4
+version: 0.0.5
 slug: eumel_discord_bot
 description: EumelBot as a Homeassistent Plugin 
 url: "https://github.com/ToichiKuroba/hassio-eumel-bot"
@@ -11,7 +11,7 @@ arch:
 advanced: true
 host_network: true
 options: 
-  discord_token: ""
+  discord_token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 schema:
   discord_token: match(^.{72}$)
 stage: experimental
