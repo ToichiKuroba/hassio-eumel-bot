@@ -1,3 +1,5 @@
+#!/usr/bin/with-contenv bashio
+
 discordToken="$(bashio::config 'discord_token')"
 export token=discordToken
 echo "Start Execution"

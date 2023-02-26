@@ -5,6 +5,6 @@ All notable changes to this project will be documented in this file.
 
 - Initial release
 
-## 0.1.1 
+## 0.1.1 & 0.1.2
 
 - Fixing problem with reading the token from the configuration. 
